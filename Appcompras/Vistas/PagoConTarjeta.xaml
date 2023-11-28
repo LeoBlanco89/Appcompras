@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:vistamodelo="clr-namespace:Appcompras.VistaModelo" x:DataType="vistamodelo:VMcompras"
+             x:Class="Appcompras.Vistas.PagoConTarjeta"
+             NavigationPage.HasNavigationBar="False">
+
+    <ScrollView>
+        <StackLayout BackgroundColor="#050506">
+            <Label Text="Informacion de Pago"
+                       TextColor="White"
+                       FontSize="24"
+                       FontAttributes="Bold"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand" />
+
+            <StackLayout Padding="20">
+                <Label Text="Datos de la Tarjeta"
+                   FontAttributes="Bold"
+                   FontSize="Large"
+                   HorizontalOptions="Center"/>
+
+                <Label Text="Numero de la Tarjeta"
+                           TextColor="White"
+                           FontSize="16" />
+                <Entry x:Name="NumeroTarjetaEntry" Placeholder="Número de Tarjeta" TextColor="White"/>
+
+                <Label Text="Nombre del Titular"
+                           TextColor="White"
+                           FontSize="16" />
+                <Entry x:Name="NombreTitularEntry" Placeholder="Nombre del Titular" TextColor="White"/>
+
+                <Label Text="Fecha de Vencimiento"
+                           TextColor="White"
+                           FontSize="16" />
+                <Entry x:Name="FechaVencimientoEntry" Placeholder="Fecha de Vencimiento" TextColor="White"/>
+
+                <Label Text="Codigo de Seguridad"
+                           TextColor="White"
+                           FontSize="16" />
+                <Entry x:Name="CodigoSeguridadEntry" Placeholder="Código de Seguridad" TextColor="White"/>
+            </StackLayout>
+
+            <Label Text="Informacion de Envio"
+                       TextColor="White"
+                       FontSize="24"
+                       FontAttributes="Bold"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand" />
+
+            <StackLayout Padding="20" Spacing="10">
+                <Label Text="Nombre completo"
+                           TextColor="White"
+                           FontSize="16" />
+                <Entry x:Name="NombreCompletoEntry" Placeholder="Nombre completo" TextColor="White"/>
+
+                <Label Text="Dirección"
+                           TextColor="White"
+                           FontSize="16" />
+                <Entry x:Name="DireccionEntry" Placeholder="Dirección" TextColor="White"/>
+
+                <Label Text="Ciudad"
+                           TextColor="White"
+                           FontSize="16" />
+                <Entry x:Name="CiudadEntry" Placeholder="Ciudad" TextColor="White"/>
+
+                <Label Text="Código postal"
+                           TextColor="White"
+                           FontSize="16" />
+                <Entry x:Name="CodigoPostalEntry" Placeholder="Código postal" TextColor="White"/>
+
+
+                <Button Text="Completar Pedido"
+                    BackgroundColor="#FEBB44"
+                    CornerRadius="30"
+                    Margin="15,0,15,20"
+                    VerticalOptions="EndAndExpand"
+                    HeightRequest="60"
+                    Clicked="Button_Clicked_Registro">
+                </Button>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

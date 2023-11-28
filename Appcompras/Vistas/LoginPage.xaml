@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Appcompras.Vistas.LoginPage"
+             BackgroundColor="#050506"
+             NavigationPage.HasNavigationBar="False"
+             BindingContext="{Binding VMlogin}">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" Padding="20">
+            <!-- Espacio para el logo -->
+            <Image Source="https://i.ibb.co/7r0cmqP/logo-fruteria-Photo-Room-png-Photo-Room.png" 
+                   HeightRequest="150" 
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand"
+                   Margin="0,0,0,20" />
+
+            <Label Text="Iniciar Sesión"
+               TextColor="White"
+               FontSize="24"
+               FontAttributes="Bold"
+               HorizontalOptions="CenterAndExpand"
+               Margin="0,0,0,20">
+
+            </Label>
+
+            <!-- Formulario de inicio de sesión -->
+            <StackLayout>
+                <Entry x:Name="entryEmail" Text="{Binding entryEmail}" Placeholder="Correo electrónico" PlaceholderColor="White" TextColor="White" Margin="0,0,0,10"/>
+                <Entry x:Name="entryPassword" Text="{Binding entryPassword}" Placeholder="Contraseña" IsPassword="True" PlaceholderColor="White" TextColor="White" Margin="0,0,0,20"/>
+                <Button Text="Iniciar Sesión" 
+                        BackgroundColor="#FEBB44"
+                        CornerRadius="30"
+                        HeightRequest="60"
+                        Command="{Binding LoginCommand}" />
+            </StackLayout>
+
+            <Button Text="Registrarse"
+                HorizontalOptions="Center"
+                VerticalOptions="EndAndExpand"
+                Margin="0,0,0,20"
+                TextColor="White"
+                BackgroundColor="#FEBB44"
+                CornerRadius="30"
+                HeightRequest="60" 
+                Clicked="SignUp_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
